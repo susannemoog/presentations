@@ -386,6 +386,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   list-style: none;
 }
 
+.reveal ul ul {
+  list-style: none;
+}
+
 .reveal ul li::before {
   content: "•";
   color: var(--r-list-bullet-color);
