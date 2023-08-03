@@ -3,13 +3,16 @@
 [@psychomieze@norden.social](https://norden.social/@psychomieze)
 ---
 ## Agenda
-	1. Introduction
-	2. Overview of Sentry
-	3. Integrating Sentry with TYPO3
-	4. Frontend Performance Analysis with Sentry and TYPO3 
-	5. Sentry Integration with GitLab CI 
-	7. Optional Live Demo
-	8. Q&A
+  1. Introduction
+  2. Overview of Sentry
+  3. Integrating Sentry with TYPO3
+  4. Frontend Performance Analysis
+  5. TYPO3 CSP Reporting
+  6. Sentry Integration with GitLab CI 
+  7. Optional Live Demo
+  8. Q&A
+
+
 ---
 ## Introduction
 - Why do you need centralized error logging / monitoring?
@@ -197,6 +200,29 @@ the necessary info from sentry
 
 ![Performance](./assets/7-sentry-both.png)
 
+---
+
+## TYPO3 CSP & Sentry
+
+- Use Sentry as endpoint for CSP errors
+
+```php
+'BE' => [
+    'contentSecurityPolicyReportingUrl' => 
+      'https://sentry.neusta.de/api/18/security/?sentry_key=123',
+],
+'FE' => [
+    'contentSecurityPolicyReportingUrl' =>
+      'https://sentry.neusta.de/api/18/security/?sentry_key=123',
+],
+```
+
+%%
+
+## CSP Report
+
+![Sentry CSP](./assets/9-sentry.png)
+
 
 ---
 
@@ -232,6 +258,13 @@ Note: Gitlab integration has to be set up in Sentry
 ## Release View
 
 ![Release](./assets/8-sentry-release.png)
+
+---
+
+## Relay
+
+- Use Sentry Relay to improve performance
+- ... and to scrub data (GDPR / data privacy)
 
 ---
 
