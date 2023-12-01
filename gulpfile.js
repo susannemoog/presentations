@@ -274,6 +274,7 @@ gulp.task('package', gulp.series(() =>
     gulp.src(
         [
             './index.html',
+            './symfony.html',
             './dist/**',
             './lib/**',
             './images/**',

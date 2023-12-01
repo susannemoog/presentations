@@ -1,6 +1,7 @@
 # Sentry & TYPO3 
 ### Susi Moog @ T3DD23
 [@psychomieze@norden.social](https://norden.social/@psychomieze)
+
 ---
 ## Agenda
   1. Introduction

@@ -3,4 +3,5 @@
 (based on reveal.js)
 
 [Sentry @ T3DD23](./sentry.md)
+[symfony/messenger @ SymfonyCon](./symfony.md)
 
