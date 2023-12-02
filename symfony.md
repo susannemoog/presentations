@@ -41,7 +41,8 @@ Note: f.e. dependency injection, commands or routing
 
 - Outgoing and incoming webhooks 
 - webhook execution (especially outgoing) asynchronous
-- general purpose queue 
+- general purpose queue
+- Use as little custom code as possible
 
 Note: for easy 3rd party integrations - buzzword: "no-code", (we are also an extension framework that should make it possible for third parties to extend the system)
 
@@ -59,13 +60,23 @@ Note:
 
 ## Integration Challenges
 
-- Documentation mainly for usage within symfony
-- No real tutorials on standalone usage
+- Standalone documentation
 - Commands rely on symfony event dispatcher
-- Use as little custom code as possible
-- Integrate into TYPO3 configuration system (for example TYPO3 already uses doctrine and has a database configured, does not use symfony/config)
+- Integrate into TYPO3 configuration system 
 
---- 
+Note: for example TYPO3 already uses doctrine and has a database configured, does not use symfony/config
+
+---
+
+### symfony/messenger
+
+
+| ![Overview](./assets/overview.svg) | 
+|:--:| 
+| Taken from the [official docs](https://symfony.com/doc/current/components/messenger.html) |
+
+
+---
 
 ### The Bus
 
